@@ -36,8 +36,8 @@ export class AuthService {
         console.log("Tokeeenn", token);
         res.cookie('access_token', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production', // Send only over HTTPS in production
-            sameSite: 'lax', // or 'strict' or 'none' depending on your frontend domain
+            secure: false, // Send only over HTTPS in production process.env.NODE_ENV === 'production',
+            sameSite: 'none', // or 'strict' or 'none' depending on your frontend domain
             maxAge: 1000 * 60 * 60 * 24, // 1 day
         });
 
