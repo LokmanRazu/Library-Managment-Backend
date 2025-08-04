@@ -13,7 +13,7 @@ async function bootstrap() {
 });
 
   app.enableCors({
-    origin: 'http://localhost:5173', // frontend origin
+    origin: 'https://library-managment-frontend-self.vercel.app/', // frontend origin
     credentials: true,              // if you’re sending cookies or auth headers
   });
 
